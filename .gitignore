@@ -1,0 +1,14 @@
+node_modules/
+
+# ENV
+.env
+.env.development
+.env.test
+src/database/config/config.js
+
+# VIM
+*.swp
+*.swo
+
+# YARN
+yarn.lock
