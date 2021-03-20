@@ -1,12 +1,12 @@
 {
   "name": "BarberServer",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server/index.js",
   "license": "MIT",
   "scripts": {
-    "development": "set NODE_ENV=development&& nodemon src/server.js --ignore __test__",
-    "production": "set NODE_ENV=production&& node src/server.js",
-    "test": "jest"
+    "development": "set NODE_ENV=development&& nodemon src/server/index.js --ignore __tests__",
+    "production": "set NODE_ENV=production&& node src/server/index.js",
+    "test": "set NODE_ENV=test&& sequelize db:migrate:undo:all && sequelize db:migrate && jest"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -15,7 +15,8 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.5.1"
+    "sequelize": "^6.5.1",
+    "validator": "^13.5.2"
   },
   "devDependencies": {
     "jest": "^26.6.3",
