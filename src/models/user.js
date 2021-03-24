@@ -33,10 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         "Error to generate token. There is no jwt secret in the server env."
       )
     }
-    const fiveMinutes = 5 * 60
-    return jwt.sign({ data: { id: this.id } }, process.env.JWT_SECRET, {
-      expiresIn: fiveMinutes
-    })
+    return jwt.sign({ data: { id: this.id } }, process.env.JWT_SECRET)
   }
 
   return User

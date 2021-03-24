@@ -6,6 +6,8 @@ router.post("/auth/login", require("../controllers/auth/login"))
 
 router.post("/users", require("../controllers/users/create"))
 
+router.get("/barbers", require("../controllers/barbers/list"))
+
 router.use((req, res) => {
   res
     .status(404)
