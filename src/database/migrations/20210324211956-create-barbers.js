@@ -18,11 +18,19 @@ module.exports = {
       latitude: {
         type: Sequelize.STRING
       },
-      logitude: {
+      longitude: {
         type: Sequelize.STRING
       },
       distance: {
         type: Sequelize.STRING
+      },
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE
       }
     })
   },

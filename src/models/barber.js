@@ -3,9 +3,9 @@ module.exports = (sequelize, DataTypes) => {
     "barber",
     {
       name: DataTypes.STRING,
-      starts: DataTypes.FLOAT,
+      stars: DataTypes.FLOAT,
       latitude: DataTypes.STRING,
-      logitude: DataTypes.STRING,
+      longitude: DataTypes.STRING,
       distance: DataTypes.STRING
     },
     {
