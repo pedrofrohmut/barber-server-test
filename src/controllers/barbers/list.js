@@ -9,12 +9,12 @@ const { barber, user } = require("../../models")
  * }
  */
 module.exports = async (req, res) => {
-  if (!req.body || !req.body.token) {
+  const token = req.get("auth-token")
+  if (!token) {
     return res
       .status(400)
       .json({ error: "Dados incorretos, forneça um json web token valido" })
   }
-  const { token } = req.body
 
   // Verify token service
   let decoded = null

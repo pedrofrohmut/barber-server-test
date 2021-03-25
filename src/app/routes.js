@@ -1,6 +1,6 @@
 const router = require("express").Router()
 
-router.post("/auth/refresh", require("../controllers/auth/refresh"))
+router.get("/auth/refresh", require("../controllers/auth/refresh"))
 
 router.post("/auth/login", require("../controllers/auth/login"))
 
